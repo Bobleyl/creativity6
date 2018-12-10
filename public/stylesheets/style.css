@@ -1,8 +1,57 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #b2cfff;
 }
 
 a {
   color: #00B7FF;
+}
+
+p {
+  color: white;
+}
+
+.form-container {
+  color: white;
+}
+
+.form-header {
+  font-size: 175%;
+}
+
+#welcomeText {
+  color: white;
+  font-size: 250%;
+  font-family: Chalkduster, fantasy;
+}
+
+#sectionTitle {
+  color: white;
+  font-size: 175%;
+  font-family: Chalkduster, fantasy;
+}
+
+#userMsg {
+  color: white;
+}
+
+#indexMsg {
+  color: white;
+}
+
+#colorText {
+  color: white;
+}
+
+#signUpLink {
+  color: white;
+}
+
+#logoutLink {
+  color: white;
+}
+
+#editLink {
+  color: white;
 }

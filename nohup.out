@@ -1,0 +1,297 @@
+before / Route
+Connected
+(node:22326) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+/login Route
+[0mGET /login [32m200 [0m11.412 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m3.292 ms - -[0m
+/login Route
+[0mGET /login [32m200 [0m2.707 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.060 ms - -[0m
+/login Route
+[0mGET /login [32m200 [0m8.446 ms - 720[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.812 ms - 607[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-05T07:34:29.994Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m8.630 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.152 ms - 734[0m
+[0mGET /stylesheets/style.css [32m200 [0m1.103 ms - 607[0m
+[0mPOST /login [36m302 [0m25.760 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m2.214 ms - 735[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.405 ms - 607[0m
+/login Route
+[0mGET /login [32m200 [0m1.691 ms - 735[0m
+/login Route
+[0mGET /login [32m200 [0m0.812 ms - 735[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.946 ms - 607[0m
+/login Route
+[0mGET /login [32m200 [0m1.141 ms - 735[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.546 ms - 607[0m
+/login Route
+[0mGET /login [32m200 [0m1.949 ms - 735[0m
+[0mGET /stylesheets/style.css [32m200 [0m3.332 ms - 607[0m
+/signup Route
+[0mGET /signup [32m200 [0m1.543 ms - 783[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.464 ms - 607[0m
+Begin exports.signup
+after new user exports.signup
+after hashing user exports.signup
+after email user exports.signup
+In exports.signup
+null
+[0mPOST /signup [36m302 [0m19.690 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-05T07:41:52.162Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as newguy',
+  user: '5c0846209c83fc57360bad9f',
+  username: 'newguy' }
+/ Route if user
+[0mGET / [32m200 [0m1.936 ms - 756[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.946 ms - 607[0m
+[0mGET /javascripts/my_app.js [32m200 [0m3.799 ms - 400[0m
+[0mGET /user/profile [32m200 [0m6.644 ms - 145[0m
+/user Route
+[0mGET /user [32m200 [0m1.956 ms - 1225[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.499 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.693 ms - -[0m
+[0mGET /user/profile [32m200 [0m1.907 ms - 145[0m
+[0mPOST /user/update [36m302 [0m7.025 ms - 54[0m
+/user Route
+[0mGET /user [32m200 [0m3.621 ms - 1215[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.393 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m3.189 ms - -[0m
+[0mGET /user/profile [32m200 [0m1.827 ms - 159[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-05T07:41:57.413Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'User Updated.',
+  user: '5c0846209c83fc57360bad9f',
+  username: 'newguy',
+  color: 'red' }
+/ Route if user
+[0mGET / [32m200 [0m7.011 ms - 749[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.379 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m2.088 ms - -[0m
+[0mGET /user/profile [32m200 [0m1.955 ms - 159[0m
+/logout Route
+[0mGET /logout [36m302 [0m1.770 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.120 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.026 ms - -[0m
+login
+{ _id: 5c0846209c83fc57360bad9f,
+  username: 'newguy',
+  hashed_password: 'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=',
+  email: 's@s.com',
+  __v: 0,
+  color: 'red' }
+[0mPOST /login [36m302 [0m7.580 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-05T07:42:05.422Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5c0846209c83fc57360bad9f',
+  username: 'newguy',
+  msg: 'Authenticated as newguy',
+  color: 'red' }
+/ Route if user
+[0mGET / [32m200 [0m2.396 ms - 759[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.999 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m2.594 ms - -[0m
+[0mGET /user/profile [32m200 [0m1.938 ms - 159[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-05T07:42:05.787Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5c0846209c83fc57360bad9f',
+  username: 'newguy',
+  msg: 'Authenticated as newguy',
+  color: 'red' }
+/ Route if user
+[0mGET / [36m304 [0m1.922 ms - -[0m
+[0mGET /stylesheets/style.css [32m200 [0m1.793 ms - 607[0m
+[0mGET /javascripts/my_app.js [32m200 [0m1.178 ms - 400[0m
+[0mGET /user/profile [32m200 [0m2.467 ms - 159[0m
+/logout Route
+[0mGET /logout [36m302 [0m1.057 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.244 ms - 720[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.471 ms - 607[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-08T04:48:04.835Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m2.087 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.720 ms - 734[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.484 ms - 607[0m
+[0mGET /favicon.ico [33m404 [0m1.461 ms - 199[0m
+/signup Route
+[0mGET /signup [32m200 [0m1.002 ms - 782[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.665 ms - -[0m
+Begin exports.signup
+after new user exports.signup
+after hashing user exports.signup
+after email user exports.signup
+In exports.signup
+null
+[0mPOST /signup [36m302 [0m3.545 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-08T04:48:21.759Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as db',
+  user: '5c0c11f59c83fc57360bada0',
+  username: 'db' }
+/ Route if user
+[0mGET / [32m200 [0m1.640 ms - 748[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.037 ms - -[0m
+[0mGET /javascripts/my_app.js [32m200 [0m2.635 ms - 400[0m
+[0mGET /user/profile [32m200 [0m1.823 ms - 146[0m
+/user Route
+[0mGET /user [32m200 [0m2.086 ms - 1221[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.950 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m0.782 ms - -[0m
+[0mGET /user/profile [36m304 [0m5.563 ms - -[0m
+[0mPOST /user/update [36m302 [0m2.806 ms - 54[0m
+/user Route
+[0mGET /user [32m200 [0m3.992 ms - 1215[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.278 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m0.781 ms - -[0m
+[0mGET /user/profile [32m200 [0m3.550 ms - 159[0m
+[0mPOST /user/delete [36m302 [0m3.720 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.686 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.106 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-10T02:48:38.693Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m1.315 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.732 ms - 734[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.521 ms - 607[0m
+[0mGET /favicon.ico [33m404 [0m1.008 ms - 199[0m
+/signup Route
+[0mGET /signup [32m200 [0m0.722 ms - 782[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.085 ms - -[0m
+Begin exports.signup
+after new user exports.signup
+after hashing user exports.signup
+after email user exports.signup
+In exports.signup
+null
+[0mPOST /signup [36m302 [0m2.400 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-10T02:49:02.519Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as TA',
+  user: '5c0e98fe9c83fc57360bada1',
+  username: 'TA' }
+/ Route if user
+[0mGET / [32m200 [0m1.152 ms - 748[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.425 ms - -[0m
+[0mGET /javascripts/my_app.js [32m200 [0m1.345 ms - 400[0m
+[0mGET /user/profile [32m200 [0m1.958 ms - 139[0m
+/user Route
+[0mGET /user [32m200 [0m0.742 ms - 1221[0m
+[0mGET /javascripts/my_app.js [36m304 [0m2.537 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.495 ms - -[0m
+[0mGET /user/profile [36m304 [0m2.594 ms - -[0m
+[0mPOST /user/update [36m302 [0m2.870 ms - 54[0m
+/user Route
+[0mGET /user [32m200 [0m0.748 ms - 1215[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.693 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.672 ms - -[0m
+[0mGET /user/profile [32m200 [0m1.501 ms - 149[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-10T02:49:10.657Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'User Updated.',
+  user: '5c0e98fe9c83fc57360bada1',
+  username: 'TA',
+  color: 'BLUE' }
+/ Route if user
+[0mGET / [32m200 [0m1.163 ms - 746[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.640 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.589 ms - -[0m
+[0mGET /user/profile [36m304 [0m3.035 ms - -[0m
+/logout Route
+[0mGET /logout [36m302 [0m1.046 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.756 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.932 ms - -[0m
+login
+{ _id: 5c0e98fe9c83fc57360bada1,
+  username: 'TA',
+  hashed_password: 'A0/Ei6WE/CqLC0DHJ+TONreYRdftkQxjq/ssIuYwOCw=',
+  email: '',
+  __v: 0,
+  color: 'BLUE' }
+[0mPOST /login [36m302 [0m2.619 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2019-01-10T02:49:36.179Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  user: '5c0e98fe9c83fc57360bada1',
+  username: 'TA',
+  msg: 'Authenticated as TA',
+  color: 'BLUE' }
+/ Route if user
+[0mGET / [32m200 [0m1.511 ms - 752[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.638 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.522 ms - -[0m
+[0mGET /user/profile [36m304 [0m1.595 ms - -[0m
+/user Route
+[0mGET /user [32m200 [0m0.734 ms - 1221[0m
+[0mGET /stylesheets/style.css [36m304 [0m3.630 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m0.915 ms - -[0m
+[0mGET /user/profile [36m304 [0m3.724 ms - -[0m
+[0mPOST /user/delete [36m302 [0m2.542 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m0.738 ms - 720[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.941 ms - -[0m
