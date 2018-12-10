@@ -11,17 +11,22 @@
         <p class="form-header">Login</p>
         <form method="POST" action="/login">
             <label>Username:</label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username"><br><br>
             <label>Password:</label>
-            <input type="password" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><br><br>
             <input type="submit" id="login" value="Login">
-        </form>
+        </form><br>
+        <a id="signUpLink" href="/signup">Sign Up</a>
     </div>
-    <a id="signUpLink" href="/signup">Sign Up</a>
     <hr>
     <span id="loginMsg">
     <%= msg %>
     </span>
+    <style>
+        .form-container{
+            padding: 30px;
+        }
+    </style>
 </body>
         
 </html>
