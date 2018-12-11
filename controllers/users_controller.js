@@ -88,6 +88,9 @@ exports.updateUser = function(req, res){
 };
 exports.getAllUsers = function(req, res) {
   User.find({}, function(err, users) {
+    console.log("Users!!!!");
+    console.log(users);
+    console.log("Users!!!!");
     res.send(users);
     // var userMap = {};
 
