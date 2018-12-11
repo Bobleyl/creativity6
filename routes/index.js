@@ -14,6 +14,7 @@ router.get('/', function(req, res){
                            fname:req.session.fname,
                            lname:req.session.lname,
                            msg:req.session.msg,
+                           friends:req.session.friends,
                            color:req.session.color});
     } else {
       console.log("/ Route else user");

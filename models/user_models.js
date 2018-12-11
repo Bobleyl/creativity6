@@ -6,6 +6,7 @@ var UserSchema = new Schema({
     lname: String,
     email: String,
     color: String,
+    friends: [{uName: String, fullName: String}],
     hashed_password: String
 });
 mongoose.model('User', UserSchema);
