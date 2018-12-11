@@ -6,7 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="/javascripts/my_app.js"></script>
     </head>
-    <body>
+    <body onload="myFunction()">
         <div ng-controller="myController">
             <h2 id="welcomeText">Welcome. You are Logged In as
                 <%= username %>
@@ -30,7 +30,14 @@
             </p>
             
         </div>
-
+        
+        <script>
+            function myFunction() {
+                document.body.style.backgroundColor = '<%= color %>';
+                console.log('<%= color %>');
+            }
+        </script>
+        
         <style>
             .myController{
                 padding: 30px;
