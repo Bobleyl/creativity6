@@ -39,6 +39,8 @@ exports.login = function(req, res){
         console.log(user);
         req.session.user = user.id;
         req.session.username = user.username;
+        req.session.fname = user.fname;
+        req.session.lname = user.lname;
         req.session.msg = 'Authenticated as ' + user.username;
         req.session.color = user.color;
         res.redirect('/');
@@ -67,6 +69,8 @@ exports.getUserProfile = function(req, res) {
 exports.updateUser = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
+    user.set('fname', req.body.fname);
+    user.set('lname', req.body.lname);
     user.set('email', req.body.email);
     user.set('color', req.body.color);
     user.save(function(err) {
@@ -74,6 +78,8 @@ exports.updateUser = function(req, res){
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
+        req.session.fname = req.body.fname;
+        req.session.lname = req.body.lname;
         req.session.color = req.body.color;
       }
       res.redirect('/user');

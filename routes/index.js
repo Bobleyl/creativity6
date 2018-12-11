@@ -11,6 +11,8 @@ router.get('/', function(req, res){
     if (req.session.user) {
       console.log("/ Route if user");
       res.render('index', {username: req.session.username,
+                           fname:req.session.fname,
+                           lname:req.session.lname,
                            msg:req.session.msg,
                            color:req.session.color});
     } else {

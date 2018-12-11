@@ -10,6 +10,8 @@ var Lab6 = function() {
     self.passwordInput = element(by.css('input[name="password"]'));
     self.emailInput = element(by.css('input[name="email"]'));
     self.colorInput = element(by.css('input[name="color"]'));
+    self.fnameInput = element(by.css('input[name="fname"]'));
+    self.lnameInput = element(by.css('input[name="lname"]'));
 
     self.saveButton = element(by.buttonText('Save'));
     self.deleteButton = element(by.partialButtonText('Delete'));
