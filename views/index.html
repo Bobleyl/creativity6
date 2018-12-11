@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
-<body>  
+<body onload="myFunction()">  
     <div ng-controller="myController">
         <h2 id="welcomeText">Welcome. You are Logged In as
             <%= username %>
@@ -28,6 +28,13 @@
       </span>
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
+    <script>
+        function myFunction() {
+            document.body.style.backgroundColor = '<%= color %>';
+            console.log("Loaded Page:  ");
+            console.log('<%= color %>');
+        }
+    </script>
     <style>
         .myController{
             padding: 30px;
