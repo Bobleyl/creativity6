@@ -1,38 +1,40 @@
 <!doctype html>
 <html ng-app="myApp"> 
+    <head>
+        <title>User Login and Sessions</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="/javascripts/my_app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="myController">
+            <h2 id="welcomeText">Welcome. You are Logged In as
+                <%= username %>
+            </h2>
+            <a id="logoutLink" href="/logout">logout</a>
+            <a id="editLink" href="/user">Edit User</a>
+            <hr>
+            <span id="indexMsg">
+                <%= msg %>
+            </span>
+            <hr>
+            <span id="colorText">
+                Your favorite color is: <%= color %>
+                <br>
+                Your Name is: <%= fname %> <%= lname %>
+            </span>
     
-<head>
-    <title>User Login and Sessions</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-</head>
-        
-<body>  
-    <div ng-controller="myController">
-        <h2 id="welcomeText">Welcome. You are Logged In as
-            <%= username %>
-        </h2>
-        <a id="logoutLink" href="/logout">logout</a>
-        <a id="editLink" href="/user">Edit User</a>
-    </div>
-    <hr>
-    <span id="indexMsg">
-        <%= msg %>
-    </span>
-    <hr>
-    <span id="colorText">
-    Your favorite color is: 
-        <%= color %>
-        <br>
-    Your Name is: 
-        <%= fname %> <%= lname %>
-      </span>
-    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
-    <script src="/javascripts/my_app.js"></script>
-    <style>
-        .myController{
-            padding: 30px;
-        }
-    </style>
-</body>
-      
+            <h3 id="allUsersText">All Other Users</h3>
+            <p ng-repeat="user in users">
+                Username: {{ user.username }} Email: {{ user.email }} Favorite color: {{ user.color }}
+            </p>
+            
+        </div>
+
+        <style>
+            .myController{
+                padding: 30px;
+            }
+        </style>
+    </body>
 </html>

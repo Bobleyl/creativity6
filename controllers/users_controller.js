@@ -86,6 +86,18 @@ exports.updateUser = function(req, res){
     });
   });
 };
+exports.getAllUsers = function(req, res) {
+  User.find({}, function(err, users) {
+    res.send(users);
+    // var userMap = {};
+
+    // users.forEach(function(user) {
+    //   userMap[user._id] = user;
+    // });
+
+    // res.send(userMap);  
+  });
+};
 exports.deleteUser = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
