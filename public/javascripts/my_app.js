@@ -20,7 +20,22 @@ angular.module('myApp', []).
       });
       
       
-      $scope.toggleFriendship = function(event, user) {
-        debugger;
+      $scope.toggleFriendship = function(user) {
+        var currentUser = $scope.user;
+        var i;
+        for (i=0; i < currentUser.friends.length; i++) {
+          if (currentUser.friends[i].uName == user.username) {
+            currentUser.friends.splice(i, 1);
+            // HTTP CALL TO REMOVE FRIEND
+            return;
+          }
+        }
+        var new_friend = {uName: user.username};
+        if(user.fname != undefined && user.lname != undefined && user.fname != '' && user.lname != '') {
+          new_friend['fullName'] = user.fname + ' ' + user.lname;
+        } else {
+          new_friend['fullName'] = '';
+        }
+        currentUser.friends.push(new_friend);
       }
 }]);

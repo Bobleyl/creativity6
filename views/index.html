@@ -22,13 +22,20 @@
                 Your favorite color is: <%= color %>
                 <br>
                 Your Name is: <%= fname %> <%= lname %>
+                <br>
+                Your current friends are:
+                <ul>
+                <li ng-repeat="friend in user.friends">
+                    <p>Username: {{friend.uName}} Name: {{friend.fullName}}</p>
+                </li>
+                </ul>
             </span>
     
             <h3 id="allUsersText">All Other Users</h3>
             <p ng-repeat="user in users">
                 Username: {{ user.username }}
                 <br>Name: {{ user.fname }} {{ user.lname }}
-                <br>Check to toggle friendship <input type="checkbox" ng-change="toggleFriendship">
+                <br>Check to toggle friendship <input type="checkbox" ng-click="toggleFriendship(user)">
             </p>
             
         </div>
