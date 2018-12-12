@@ -115,11 +115,51 @@ exports.deleteUser = function(req, res){
 exports.removeFriend = function(req, res) {
   var user = req.session.user;
   var friend = req.params.id;
-  console.log(user,friend);
+  
+  User.findOne({_id: user})
+  .exec(function(err, user) {
+    
+    var i;
+    for (i=0; i < user.friends.length; i++) {
+      if (user.friends[i].uName == friend) {
+        user.friends.splice(i, 1);
+        user.save(function(err) {
+          if (err){
+            res.sessor.error = err;
+          } else {
+            console.log("User's friend successfully deleted");
+          }
+          res.set("Connection", "close");
+        });
+      }
+    }
+  });
 }
 
 exports.addFriend = function(req, res) {
   var user = req.session.user;
-  var friend = req.params.id;
-  console.log(user,friend);
+  var friend_id = req.params.id;
+  
+  User.findOne({_id: user})
+  .exec(function(err, user) {
+    
+    User.findOne({username: friend_id})
+    .exec(function(err, friend) {
+      var new_friend = {uName: friend.username};
+      if(friend.fname && friend.lname) {
+        new_friend['fullName'] = friend.fname + ' ' + friend.lname;
+      } else {
+        new_friend['fullName'] = '';
+      }
+      user.friends.push(new_friend);
+      user.save(function(err) {
+        if (err){
+          res.sessor.error = err;
+        } else {
+          console.log("User's friend successfully added");
+        }
+        res.set("Connection", "close");
+      });
+    });
+  });
 }
