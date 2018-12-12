@@ -3,16 +3,13 @@ angular.module('myApp', []).
                               function($scope, $http) {
     $http.get('/user/profile')
     .then(function(data, status, headers, config){
-      console.log("INSIDE USER/PROFILE:")
-      console.log(data)
-       $scope.user = data.data;
+      $scope.user = data.data;
       $scope.error = "";
       $scope.users = [];
       return $http.get('/users')
     })
     .then(function(data, status, headers, config) {
           $scope.users = data['data'];
-          console.log(data);
           var i;
           for(i = 0; i < $scope.users.length; i++) {
             var user = $scope.users[i];
@@ -21,4 +18,9 @@ angular.module('myApp', []).
             }
           }
       });
+      
+      
+      $scope.toggleFriendship = function(event, user) {
+        debugger;
+      }
 }]);

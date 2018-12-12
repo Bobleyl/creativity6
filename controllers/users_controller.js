@@ -88,16 +88,7 @@ exports.updateUser = function(req, res){
 };
 exports.getAllUsers = function(req, res) {
   User.find({}, function(err, users) {
-    console.log("Users:");
-    console.log(users);
     res.send(users);
-    // var userMap = {};
-
-    // users.forEach(function(user) {
-    //   userMap[user._id] = user;
-    // });
-
-    // res.send(userMap);  
   });
 };
 exports.deleteUser = function(req, res){
