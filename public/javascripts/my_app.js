@@ -26,7 +26,7 @@ angular.module('myApp', []).
         for (i=0; i < currentUser.friends.length; i++) {
           if (currentUser.friends[i].uName == user.username) {
             currentUser.friends.splice(i, 1);
-            // HTTP CALL TO REMOVE FRIEND
+            $http.delete(`/user/friends/${user.username}/remove`);
             return;
           }
         }
@@ -37,5 +37,6 @@ angular.module('myApp', []).
           new_friend['fullName'] = '';
         }
         currentUser.friends.push(new_friend);
+        $http.post(`/user/friends/${user.username}/add`);
       }
 }]);

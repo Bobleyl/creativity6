@@ -58,4 +58,7 @@ router.post('/login', users.login);
 router.get('/user/profile', users.getUserProfile);
 router.get('/users', users.getAllUsers);
 
+router.post('/user/friends/:id/remove', users.removeFriend);
+router.post('/user/friends/:id/add', users.addFriend);
+
 module.exports = router;

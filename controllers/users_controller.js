@@ -111,3 +111,15 @@ exports.deleteUser = function(req, res){
     }
   });
 };
+
+exports.removeFriend = function(req, res) {
+  var user = req.session.user;
+  var friend = req.params.id;
+  console.log(user,friend);
+}
+
+exports.addFriend = function(req, res) {
+  var user = req.session.user;
+  var friend = req.params.id;
+  console.log(user,friend);
+}
